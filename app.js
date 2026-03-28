@@ -17,7 +17,7 @@ function login() {
     return;
   }
 
-  // Guardar sesión
+  // Guardar sesión nn
   localStorage.setItem("user", email);
 
   window.location.href = "dashboard.html";
