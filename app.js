@@ -22,3 +22,7 @@ function login() {
 
   window.location.href = "dashboard.html";
 }
+
+function irAsistencia() {
+  window.location.href = "asistencia.html";
+}
