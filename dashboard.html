@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Colegio San José</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-
-<div class="dashboard">
-  <h2>Bienvenido</h2>
-
-  <div class="card">
-    <h3>Clase actual</h3>
-    <p>Matemáticas - 10A</p>
-  </div>
-
-  <div class="card">
-    <h3>Asistencia semanal</h3>
-    <p id="porcentaje">85%</p>
-  </div>
-
-  <div class="card alert">
-    <h3>Alertas</h3>
-    <p>3 estudiantes con fallas consecutivas</p>
-  </div>
-
-  <button onclick="irAsistencia()">Tomar asistencia</button>
-</div>
-
-<script src="app.js"></script>
+<body class="dashboard-page">
+    <nav class="sidebar">
+        <div class="logo">CSJ</div>
+        <ul>
+            <li class="active"><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="asistencia.html">Asistencia</a></li>
+            <li><a href="#" onclick="logout()">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <header>
+            <h1>Bienvenido, <span id="username">Usuario</span></h1>
+        </header>
+        <section class="stats">
+            <div class="card">
+                <h3>Total Estudiantes</h3>
+                <p>1,250</p>
+            </div>
+            <div class="card">
+                <h3>Asistencia Hoy</h3>
+                <p>94%</p>
+            </div>
+            <div class="card alert">
+                <h3>Alertas Pendientes</h3>
+                <p>3</p>
+            </div>
+        </section>
+        <div class="actions" style="margin-top: 20px;">
+            <button onclick="irAsistencia()" style="max-width: 200px;">Tomar Asistencia Hoy</button>
+        </div>
+    </main>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('username').innerText = localStorage.getItem('user') || 'Docente';
+        function logout() {
+            localStorage.removeItem('user');
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
 </html>

@@ -13,11 +13,11 @@ function login() {
       return;
     }
 
-    error.innerText = "Usuario o contraseñaincorrectos";
+    error.innerText = "Usuario o contraseña incorrectos";
     return;
   }
 
-  // Guardar sesión nn
+  // Guardar sesión
   localStorage.setItem("user", email);
 
   window.location.href = "dashboard.html";
