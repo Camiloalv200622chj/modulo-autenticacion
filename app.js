@@ -23,6 +23,7 @@ function login() {
   window.location.href = "dashboard.html";
 }
 
+// Verificar sesión al cargar la página
 function irAsistencia() {
   window.location.href = "asistencia.html";
 }
