@@ -27,3 +27,33 @@ function login() {
 function irAsistencia() {
   window.location.href = "asistencia.html";
 }
+
+const estudiantes = [
+  "Juan Pérez",
+  "Ana Gómez",
+  "Luis Torres",
+  "María Díaz"
+];
+
+if (document.getElementById("lista")) {
+  const lista = document.getElementById("lista");
+
+  estudiantes.forEach(nombre => {
+    lista.innerHTML += `
+      <tr>
+        <td>${nombre}</td>
+        <td>
+          <select>
+            <option>Presente</option>
+            <option>Ausente</option>
+          </select>
+        </td>
+      </tr>
+    `;
+  });
+}
+
+function guardarAsistencia() {
+  alert("Asistencia guardada");
+  window.location.href = "dashboard.html";
+}
