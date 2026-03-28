@@ -13,7 +13,7 @@ function login() {
       return;
     }
 
-    error.innerText = "Usuario o contraseña incorrectos";
+    error.innerText = "Usuario o contraseñaincorrectos";
     return;
   }
 
