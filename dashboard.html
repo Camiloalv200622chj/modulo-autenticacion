@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard">
+  <h2>Bienvenido</h2>
+
+  <div class="card">
+    <h3>Clase actual</h3>
+    <p>Matemáticas - 10A</p>
+  </div>
+
+  <div class="card">
+    <h3>Asistencia semanal</h3>
+    <p id="porcentaje">85%</p>
+  </div>
+
+  <div class="card alert">
+    <h3>Alertas</h3>
+    <p>3 estudiantes con fallas consecutivas</p>
+  </div>
+
+  <button onclick="irAsistencia()">Tomar asistencia</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
