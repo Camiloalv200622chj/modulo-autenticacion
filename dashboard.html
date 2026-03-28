@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Colegio San José</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <nav class="sidebar">
+        <div class="logo">CSJ</div>
+        <ul>
+            <li class="active"><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="asistencia.html">Asistencia</a></li>
+            <li><a href="#" onclick="logout()">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <header>
+            <h1>Bienvenido, <span id="username">Usuario</span></h1>
+        </header>
+        <section class="stats">
+            <div class="card">
+                <h3>Total Estudiantes</h3>
+                <p>1,250</p>
+            </div>
+            <div class="card">
+                <h3>Asistencia Hoy</h3>
+                <p>94%</p>
+            </div>
+            <div class="card alert">
+                <h3>Alertas Pendientes</h3>
+                <p>3</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.getElementById('username').innerText = localStorage.getItem('user') || 'Docente';
+        function logout() {
+            localStorage.removeItem('user');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

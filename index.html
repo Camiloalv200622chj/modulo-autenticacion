@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Login</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso - Colegio San José</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-
-<div class="login-container">
-  <h2>Ingreso</h2>
-
-  <input type="email" id="email" placeholder="Correo institucional">
-  <input type="password" id="password" placeholder="Contraseña">
-
-  <button onclick="login()">Ingresar</button>
-
-  <p id="error"></p>
-</div>
-
-<script src="app.js"></script>
+<body class="login-page">
+    <div class="login-container">
+        <div class="logo">CSJ</div>
+        <h2>Control de Asistencia</h2>
+        <p>Inicia sesión con tu correo institucional</p>
+        
+        <input type="email" id="email" placeholder="Correo (@sanjose.edu)" autocomplete="email">
+        <input type="password" id="password" placeholder="Contraseña" autocomplete="current-password">
+        
+        <button onclick="login()">Ingresar al Sistema</button>
+        
+        <p id="error" class="error-message"></p>
+    </div>
+    <script src="app.js"></script>
 </body>
-</html>  
+</html>
